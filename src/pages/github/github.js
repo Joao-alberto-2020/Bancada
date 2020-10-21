@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./github.css"
 class Github extends Component{
  constructor(){
     super();
@@ -23,16 +24,21 @@ class Github extends Component{
 render(){
     const {user, repo} = this.state;
     return(
-        <div className="texto ">
+        <div className="texto">
             <div className="">
 
 
             <div className="">
                
-                <p>Meu github infos</p>
-                <p>
+                <p className="titulo bg-card1">Meu github infos</p>
+                <div>
+                    <img className="circle-photo" src={user.avatar_url}></img>
+                    <div>
                     Login: @{user.login}<br></br>
-                </p>
+
+                    </div>
+                  
+                </div>
                 <br></br>
                 <br></br>
             </div>
@@ -42,14 +48,15 @@ render(){
             </div>
             
             <div className="">     
-            <div>{user.login}</div>
-            <img src={user.avatar_url}></img>
+           
+            <img src={user. vatar_url}></img>
             {repo.map(
                 repositorio => 
-                <p>Nome do repositorio: {repositorio.name}
+                <div className="card container texto bg-card">
+             <div>Nome do repositorio: {repositorio.name}</div>
                  Descrição: {repositorio.description} <br></br>    
                  Link do repositorio: <a href={repositorio.html_url}>clique aqui</a>   
-                </p>
+                </div>
                 
             )}
                    </div>

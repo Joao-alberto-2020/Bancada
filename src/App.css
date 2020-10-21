@@ -14,14 +14,9 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  text-align: center;
 }
 
 .App-link {
@@ -38,4 +33,10 @@
 }
 .texto{
   font-family: 'Montserrat', sans-serif;;
+}
+
+body{
+  background-image: url(https://c.wallhere.com/photos/cf/dd/gradient_4K-1842465.jpg!d);
+  background-size: 100%;
+  background-attachment: fixed;
 }

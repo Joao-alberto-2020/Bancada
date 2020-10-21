@@ -1,0 +1,33 @@
+
+footer{
+    background-color: rgba(13, 255, 243, 0.198);
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+.img img{
+    height: 30px; 
+    width: 30px;
+    margin-right: 1rem;
+    /* botar em 30px como padrao */
+} 
+.copyright {
+    font-size: 11px;
+    text-align: center;
+}
+
+.contato p a{
+color: rgb(13, 255, 195)
+}
+.contato p a:hover{
+    color: rgba(42, 255, 141, 0.39)
+ }
+
+.cor{
+color: royalblue
+}
+
+
+
+.endereço{
+text-align: 2rem;
+}
