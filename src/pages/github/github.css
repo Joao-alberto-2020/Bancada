@@ -17,9 +17,7 @@
       text-align: center;
   }
   .bg-card{
-      background-color: rgba(29, 255, 225, 0.212);
       margin-bottom: 10px;
-      filter: blur();
       border-radius: 20px;
      backdrop-filter: blur(30px);
   }

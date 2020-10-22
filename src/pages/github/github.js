@@ -25,14 +25,14 @@ render(){
     const {user, repo} = this.state;
     return(
         <div className="texto">
-            <div className="">
+            <div className="row">
 
 
-            <div className="">
+            <div className="col-md-3 col-12">
                
                 <p className="titulo bg-card1">Meu github infos</p>
                 <div>
-                    <img className="circle-photo" src={user.avatar_url}></img>
+                    <img className="circle-photo tossing" src={user.avatar_url}></img>
                     <div>
                     Login: @{user.login}<br></br>
 
@@ -47,12 +47,12 @@ render(){
 
             </div>
             
-            <div className="">     
+            <div className="col-md-9 col-12">     
            
             <img src={user. vatar_url}></img>
             {repo.map(
                 repositorio => 
-                <div className="card container texto bg-card">
+                <div className="card container texto bg-card1">
              <div>Nome do repositorio: {repositorio.name}</div>
                  Descrição: {repositorio.description} <br></br>    
                  Link do repositorio: <a href={repositorio.html_url}>clique aqui</a>   
