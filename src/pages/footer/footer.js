@@ -10,8 +10,7 @@ class Footer extends Component {
     render(){
         return(
             <footer>
-                <br></br>
-                <div className="container">
+                <span className="container">
                     <div className="row">
     
                         <div className="col-4">
@@ -31,11 +30,12 @@ class Footer extends Component {
                                <div className="col-4">
                                <p className="endereço">
                             Endereço:<br></br>
-                            avenida brasil <br></br>
+                            Avenida Brasil <br></br>
+                            Porto Alegre - RS
                             </p>              
                                </div>
                     </div>
-                </div>
+                </span>
                 <p className="copyright py-2 ">copyright@2020 - MXPLAYBRz</p>
             </footer>
         )

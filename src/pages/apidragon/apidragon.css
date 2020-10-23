@@ -7,15 +7,27 @@
 .botao1{
 background-color: rgba(4, 0, 255, 0.472);
     backdrop-filter: blur(10px);
-    border-radius: 15px;
+    border-radius: 130px;
 }
 .botao2{
     background-color: rgba(255, 0, 0, 0.479);
         backdrop-filter: blur(10px);
-        border-radius: 15px;
+        border-radius: 130px;
 }
 .botao3{
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 100px;
     backdrop-filter: blur(20px);
+    
+}
+
+.lutuar{
+    animation-name: floating;
+    -webkit-animation-name: floating;
+
+    animation-duration: 50s;	
+    -webkit-animation-duration: 50s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
 }

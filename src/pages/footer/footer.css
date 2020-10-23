@@ -3,7 +3,10 @@ footer{
     background-color: transparent;
     backdrop-filter: blur(60px);
     text-align: center;
+    font-family: 'Grandstander', cursive;
+    
 }
+
 .img img{
     height: 30px; 
     width: 30px;
