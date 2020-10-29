@@ -1,0 +1,36 @@
+header{
+    background-color: transparent;
+    backdrop-filter: blur(px);
+    text-align: center;
+    font-family: 'Grandstander', cursive;
+}
+
+.blur{
+    background-color: orange;
+    backdrop-filter: blur(1000px);
+   
+    font-family: 'Grandstander', cursive;
+    border-radius: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.blur2{
+    background-color: cyan;
+    backdrop-filter: blur(1000px);
+    
+    font-family: 'Grandstander', cursive;
+    border-radius: 0px;
+    height: auto;
+    width: 100%;
+}
+
+.App-header {
+    font-size: 200%;
+    color: white;
+    font-family: 'Grandstander', cursive;
+  }
+
+.colortext{
+    color:  black;
+}

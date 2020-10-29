@@ -67,11 +67,11 @@ handleModalOpen(){
         </div>
         <button className="botao3 col-6" onClick={() => this.handleModalOpen()}>Criar</button>
         </div>
-            <div className="container flutuar cards">
+            <div className="container cards">
                 <div className="row">
                     <div className="col">
 
-                    <table className="table bg-card cards">
+                    <table className="table bg-card">
                             <thead className="">
                                 <tr>
                                     <th>ID</th>

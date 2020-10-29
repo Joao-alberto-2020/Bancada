@@ -1,6 +1,6 @@
 .cards{
     background-color: transparent;
-    backdrop-filter: blur(70px);
+    backdrop-filter: blur(200px);
     border-radius: 80px;
     color: black
 }
@@ -21,7 +21,7 @@ background-color: rgba(4, 0, 255, 0.472);
     
 }
 
-.lutuar{
+.flutuar{
     animation-name: floating;
     -webkit-animation-name: floating;
 

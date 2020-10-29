@@ -24,11 +24,11 @@ class Github extends Component{
 render(){
     const {user, repo} = this.state;
     return(
-        <div className="texto">
+        <div className="texto bg-card1">
             <div className="row">
 
 
-            <div className="col-md-3 col-12">
+            <div className="col mt-5 ">
                
                 <p className="titulo bg-card1">Meu github infos</p>
                 <div>
@@ -41,13 +41,9 @@ render(){
                 </div>
                 <br></br>
                 <br></br>
-            </div>
+            </div> 
 
-            
-
-            </div>
-            
-            <div className="col-md-9 col-12">     
+            <div className="col">     
            
             <img src={user. vatar_url}></img>
             {repo.map(
@@ -59,9 +55,9 @@ render(){
                 </div>
                 
             )}
-                   </div>
-          
              </div>
+                 </div>
+                     </div>
 
        
 
