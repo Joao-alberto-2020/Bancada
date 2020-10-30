@@ -14,7 +14,10 @@
 
   .titulo{
       font-size: 22px;
-      text-align: center;
+      align-items: center;
+      font-family: 'Turret Road', cursive;
+      font-weight: bold;
+      color: black;
   }
   .bg-card{
       margin-bottom: 10px;
@@ -23,10 +26,10 @@
   }
 
   .bg-card1{
-    background-color: transparent;
+    background-color: transparent!important;
     margin-bottom: 10px;
     border-radius: 20px;
-   backdrop-filter: blur(200px);
+   backdrop-filter: blur(100px);
   }
 .App {
     text-align: center;

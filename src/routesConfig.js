@@ -1,7 +1,13 @@
-import Apidragon from './pages/apidragon/apidragon'
-import Git from './pages/github/github'
+import Apidragon from './pages/apidragon/apidragon';
+import Git from './pages/github/github';
+import Home from './pages/home/home';
 
 const config = [
+    { 
+        path: '/',
+         component: Home,
+        exact: true,
+    },
     {
         path: '/Apidragon',
         component: Apidragon,
@@ -12,6 +18,7 @@ const config = [
          component: Git,
         exact: true,
     },
+    
 ]
 
 export default config;

@@ -11,10 +11,9 @@ class Header extends Component {
             <header>
                <div>
                    <div className="row">
-                   <Link className="blur" to="/apidragon"><div className="blur"><span className="colortext mt-4">APIDRAGONS</span></div></Link>
-                   <Link className="blur" to="/git"><div className="blur2"><span className="colortext mt-4">GITHUB</span></div></Link>
-                   
-                    
+                   <Link className="blur col-4" to="/apidragon"><div className="blur"><span className="colortext mt">APIDRAGONS</span></div></Link>
+                   <Link className="blur col-4" to="/"><div className="blur3"><span classname="colortext mt">HOME</span></div></Link>
+                   <Link className="blur col-4" to="/git"><div className="blur2"><span className="colortext mt">GITHUB</span></div></Link>
                    </div>
                </div>
                <br></br>

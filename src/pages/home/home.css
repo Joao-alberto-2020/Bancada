@@ -1,0 +1,5 @@
+.blur{
+    background-color: transparent;
+    font-family: 'Grandstander', cursive;
+    backdrop-filter: blur(100px);
+}

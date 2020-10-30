@@ -8,22 +8,29 @@ header{
 .blur{
     background-color: orange;
     backdrop-filter: blur(1000px);
-   
     font-family: 'Grandstander', cursive;
     border-radius: 0px;
     height: auto;
-    width: 100%;
+    width: auto;
 }
 
 .blur2{
     background-color: cyan;
     backdrop-filter: blur(1000px);
-    
     font-family: 'Grandstander', cursive;
     border-radius: 0px;
     height: auto;
-    width: 100%;
+    width: auto;
 }
+
+.blur3{
+        background-color: rgb(9, 255, 0);
+        backdrop-filter: blur(1000px);
+        font-family: 'Grandstander', cursive;
+        border-radius: 0px;
+        height: auto;
+        width: auto;
+};
 
 .App-header {
     font-size: 200%;

@@ -24,13 +24,11 @@ class Github extends Component{
 render(){
     const {user, repo} = this.state;
     return(
-        <div className="texto bg-card1">
+        <div className="texto titulo bg-card1">
             <div className="row">
-
-
             <div className="col mt-5 ">
                
-                <p className="titulo bg-card1">Meu github infos</p>
+                <p className="titulo">Meu github infos</p>
                 <div>
                     <img className="circle-photo tossing" src={user.avatar_url}></img>
                     <div>
@@ -48,7 +46,7 @@ render(){
             <img src={user. vatar_url}></img>
             {repo.map(
                 repositorio => 
-                <div className="card container texto bg-card1">
+                <div className="card container bg-card1">
              <div>Nome do repositorio: {repositorio.name}</div>
                  Descrição: {repositorio.description} <br></br>    
                  Link do repositorio: <a href={repositorio.html_url}>clique aqui</a>   

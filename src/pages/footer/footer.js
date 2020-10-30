@@ -12,7 +12,6 @@ class Footer extends Component {
             <footer>
                 <span className="container">
                     <div className="row">
-    
                         <div className="col-4">
                         <p>redes sociais</p>
                         <div className="row-5 img">
@@ -22,7 +21,7 @@ class Footer extends Component {
                           <a href="https://www.instagram.com"> <img src={insta}></img></a>
                         </div>
                         </div>
-                        <div className="col-4 contato ">
+                        <div className="col-4 contato">
                         <p> contato: <a href="tel:05551997670000">(51) 98354467</a> </p>
                         <p>email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
                         </div>   
@@ -32,7 +31,7 @@ class Footer extends Component {
                             Endereço:<br></br>
                             Avenida Brasil <br></br>
                             Porto Alegre - RS
-                            </p>              
+                            </p>        
                                </div>
                     </div>
                 </span>
