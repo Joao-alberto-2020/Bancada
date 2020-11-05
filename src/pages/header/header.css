@@ -30,7 +30,8 @@ header{
         border-radius: 0px;
         height: auto;
         width: auto;
-};
+        color: black;
+}
 
 .App-header {
     font-size: 200%;

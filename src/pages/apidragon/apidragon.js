@@ -30,12 +30,10 @@ onCreate(event){
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(dragon),
 
-
-
   }
   fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon', request) 
   .then(response => response.json())
-  .then( response => this.getlist())
+  .then(response2 => this.getList()) 
 } 
 
 
@@ -44,10 +42,10 @@ console.log('editar' +id)
 }
 
 onDelete(id){
-    fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/' +id, {method: 'DELETE'},) 
-    .then(response => response.json()).then(response2 => console.log(response2))
-    .then( response => this.getlist())
-}
+    fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/'+id, {method: 'DELETE'})
+    .then(response => response.json())
+    .then(response2 => this.getList()) 
+  }
 handleModalClose(){
     this.setState({showModal: false})
 }
@@ -69,7 +67,7 @@ handleModalOpen(){
         </div>
             <div className="container cards">
                 <div className="row">
-                    <div className="col">
+                    <div className=" col-12">
 
                     <table className="table bg-card">
                             <thead className="">
@@ -107,7 +105,7 @@ handleModalOpen(){
                     </Modal.Header>
                 <Modal.Body>
 
-                    <Form onSubmit={this.onCreate}>
+                    <form onSubmit={this.onCreate}>
                         <Form.Group controlId="formBasicEmail">
                             <Form.Label>Name</Form.Label>
                             <Form.Control type="text" name="name"></Form.Control>
@@ -119,7 +117,7 @@ handleModalOpen(){
                          <Button variant="primary" type="submit">
                              Submit
                          </Button>
-                    </Form>     
+                    </form>     
                 </Modal.Body>
 
                 <Modal.Footer>

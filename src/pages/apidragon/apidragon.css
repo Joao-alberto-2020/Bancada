@@ -1,6 +1,6 @@
 .cards{
     background-color: transparent;
-    backdrop-filter: blur(200px);
+    backdrop-filter: blur(600px);
     border-radius: 80px;
     color: black
 }
