@@ -9,6 +9,11 @@ class Header extends Component {
         return(
 
             <header>
+              <div className="row blur">
+                <div className="col tamanho">
+                GetRay
+                </div>
+                </div>
                <div className="cont">
                    <div className="row blur">
                    <Link className=" col-4 colortext" to="/apidragon">DRAGON</Link>
