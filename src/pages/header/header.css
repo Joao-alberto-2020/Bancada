@@ -1,44 +1,30 @@
 header{
-    background-color: transparent;
-    backdrop-filter: blur(px);
     text-align: center;
     font-family: 'Grandstander', cursive;
 }
 
 .blur{
-    background-color: orange;
+    background-color: transparent;
     backdrop-filter: blur(1000px);
     font-family: 'Grandstander', cursive;
-    border-radius: 0px;
-    height: auto;
-    width: auto;
+
 }
-
-.blur2{
-    background-color: cyan;
-    backdrop-filter: blur(1000px);
-    font-family: 'Grandstander', cursive;
-    border-radius: 0px;
-    height: auto;
-    width: auto;
-}
-
-.blur3{
-        background-color: rgb(9, 255, 0);
-        backdrop-filter: blur(1000px);
-        font-family: 'Grandstander', cursive;
-        border-radius: 0px;
-        height: auto;
-        width: auto;
-        color: black;
-}
-
-.App-header {
-    font-size: 200%;
-    color: white;
-    font-family: 'Grandstander', cursive;
-  }
-
+ 
 .colortext{
-    color:  black;
+    color: white;
 }
+
+.cont{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 600px) {
+    header{
+     font-size: medium;
+    }
+    
+ }

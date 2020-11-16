@@ -1,21 +1,19 @@
 import React, {Component} from "react";
 import "../header/header.css";
-import {Link, Route} from 'react-router-dom';
+import { Link, Route, withRouter } from 'react-router-dom';
 import routesConfig from '../../routesConfig';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
-import Apidragon from "../apidragon/apidragon";
-import Github from "../github/github";
+
 
 class Header extends Component {
     render(){
         return(
 
             <header>
-               <div>
-                   <div className="row">
-                   <Link className="blur col-4" to="/apidragon"><div className="blur"><span className="colortext mt">APIDRAGONS</span></div></Link>
-                   <Link className="blur col-4" to="/"><div className="blur3"><span classname="colortext mt">HOME</span></div></Link>
-                   <Link className="blur col-4" to="/git"><div className="blur2"><span className="colortext mt">GITHUB</span></div></Link>
+               <div className="cont">
+                   <div className="row blur">
+                   <Link className=" col-4 colortext" to="/apidragon">DRAGON</Link>
+                   <Link className=" col-4 colortext" to="/">HOME</Link>
+                   <Link className=" col-4 colortext" to="/git">GITHUB</Link>
                    </div>
                </div>
                <br></br>

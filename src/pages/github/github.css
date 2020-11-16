@@ -1,5 +1,3 @@
-
-
 .circle-photo{
     height: 200px;
     width: 200px;
@@ -9,86 +7,23 @@
 
 .texto{
     font-family: 'Montserrat', sans-serif;
-    color: black
+    color: white;
   }
 
-  .titulo{
+.titulo{
       font-size: 22px;
       align-items: center;
       font-family: 'Turret Road', cursive;
       font-weight: bold;
-      color: black;
-  }
-  .bg-card{
-      margin-bottom: 10px;
-      border-radius: 20px;
-     backdrop-filter: blur(30px);
-  }
-
-  .bg-card1{
-    background-color: transparent!important;
-    margin-bottom: 10px;
-    border-radius: 20px;
-   backdrop-filter: blur(100px);
-  }
-.App {
-    text-align: center;
-  }
-  
-  .App-logo {
-    height: 40vmin;
-    pointer-events: none;
-  }
-  
-  .pink {
-    color: #ff1493;
-  }
-  
-  .yellow {
-    color: #ffff00
-  }
-  .green {
-    color: #00ff00
-  }
-  
-  .anuncio {
-   width: auto;
-   filter: blur(0px);
-  }
-  
-  .fundo {
-    width: auto;
-    filter: blur(5px);
-   }
-   
-  @keyframes App-logo-spin {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-  
-  .footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-  }
-
-  .tossing{
-    animation-name: tossing;
-    -webkit-animation-name: tossing;	
-
-    animation-duration: 2.5s;	
-    -webkit-animation-duration: 2.5s;
-
-    animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
+      color: white;
 }
   
-  
-  
-  
-  
+
+.bg-card1{
+    background-color: transparent!important;
+    margin-bottom: 10px;;
+    backdrop-filter: blur(400px);
+    border-radius: 30px!important;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}

@@ -7,19 +7,27 @@
   pointer-events: none;
 }
 
-.App-header {
+.App-header2 {
   font-size: 200%;
   color: white;
   font-family: 'Grandstander', cursive;
-  
 }
+
+
 
 body{
   background-image: url(https://uhdwallpapers.xyz/media/images/ori/2020/08/16/abstract-color-smoke-4k-5k-hd-abstract-wallpaper-3396591597593325.jpg);
   background-size: 100%;
   background-attachment: fixed;
 }
-
+ 
+@media only screen and (max-width: 600px) {
+  body{
+    background-repeat: no-repeat;
+    background-size: 2000px;
+    background-attachment: fixed;
+  }
+}
 .example-enter {
   opacity: 0.01;
 }

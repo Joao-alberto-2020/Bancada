@@ -1,76 +1,58 @@
 import React, { Component } from 'react';
-import { Modal, Button, Form } from 'react-bootstrap';
-import { render } from 'react-dom';
-import "./apidragon.css"
+import { Modal, Button } from 'react-bootstrap';
+import {Link, withRouter} from 'react-router-dom';
+import './apidragon.css';
+
+
 class Apidragon extends Component {
     constructor(){
         super();
-        this.state = {listDragons: [], showModal: false, showAlert: false};
-         this.onDelete=this.onDelete.bind(this)
-         this.onEdit=this.onEdit.bind(this)
-         this.onCreate=this.onCreate.bind(this)
+        this.state = {
+            listDragons: [],
+            showModalDeletar: false,
+            dragon: [], 
+            id_dragon: 0
+        };
+        
     }
 
     componentDidMount(){
         this.getList();
     }
-getList(){
-    fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon') 
+
+    getList(){
+        fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon') 
         .then( response => response.json() ) 
         .then( data => {this.setState({listDragons: data}); } );
-}
+    }
 
-onCreate(event){
-    event.preventDefault();
-    let form = event.target
+    onDelete(){
+        fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/'+this.state.id_dragon, {method: 'DELETE'})
+        .then(response => response.json())
+        .then( () => {this.getList(); this.fechaModalDeletar()})
+    }
 
-  const dragon = {name: form.elements.name.value, type: form.elements.type.value,}
-  const request = {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify(dragon),
-
-  }
-  fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon', request) 
-  .then(response => response.json())
-  .then(response2 => this.getList()) 
-} 
-
-
-onEdit(id){
-console.log('editar' +id)
-}
-
-onDelete(id){
-    fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/'+id, {method: 'DELETE'})
-    .then(response => response.json())
-    .then(response2 => this.getList()) 
-  }
-handleModalClose(){
-    this.setState({showModal: false})
-}
-
-handleModalOpen(){
-    this.setState({showModal: true})
-}
-
-
+    fechaModalDeletar(){
+        this.setState({showModalDeletar: false});
+    }
+    abreModalDeletar(id_dragon){
+        this.setState({id_dragon: id_dragon});
+        this.setState({showModalDeletar: true});
+    }
 
     render(){
-        const {listDragons, showModal, showAlert} = this.state;
-        return <> 
-        <div className="row">
-        <div className="col-3">
-
+        const {listDragons, showModalDeletar} = this.state;
+        return <>
+        
+    <div className="container botao3">
+    <Link to="/apidragon/add" className="colortext2">Criar</Link>
         </div>
-        <button className="botao3 col-6" onClick={() => this.handleModalOpen()}>Criar</button>
-        </div>
-            <div className="container cards">
+            {/* <div className="container cards none">
                 <div className="row">
-                    <div className=" col-12">
+                    <div className="col-12">
 
                     <table className="table bg-card">
-                            <thead className="">
+                            <thead className="colortext">
                                 <tr>
                                     <th>ID</th>
                                     <th>Nome</th>
@@ -80,10 +62,10 @@ handleModalOpen(){
                                 </tr>
                             </thead>
 
-                            <tbody className="">
+                            <tbody>
                                 {listDragons.map(
                                     dragon =>
-                                    <tr>
+                                    <tr className="colortext">
                                         <td>{dragon.id}</td>
                                         <td>{dragon.name}</td>
                                         <td>{dragon.type}</td>
@@ -98,31 +80,67 @@ handleModalOpen(){
                         </table>
                     </div>
                 </div>
-            </div>
-            <Modal show={showModal} onHide={()=> this.handleModalClose()}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Criar Dragão</Modal.Title>
-                    </Modal.Header>
+            </div> */}
+
+            {listDragons.map(
+                    dragon =>       
+                   <div className="container mb-2 mt-1 cards bordermobile">
+                       <br></br>
+
+                         <div className="row">
+                            <div className="col">
+                                 Id: {dragon.id}
+                             </div>
+                         </div>
+
+                         <div className="row">
+                             <div className="col">
+                                  Nome: {dragon.name}
+                            </div>
+                         </div>
+
+                          <div className="row">
+                             <div className="col">
+                                 Tipo: {dragon.type}
+                             </div>
+                          </div>
+
+                          <div className="row">
+                              <div className="col">
+                                 Data: {dragon.createdAt}
+                             </div>
+                          </div>
+                    
+
+                           <div className="row">
+                               <div className="col">
+                                 <Link to={`/apidragon/edit/${dragon.id}`} className="colortext2 botao1">Editar</Link>      
+                                 </div>     
+                           </div>
+                             <div className="row">
+                                 <div className="col">
+                                  <button onClick={() => this.abreModalDeletar(dragon.id)} className="botao2">Deletar</button>
+                                  </div>
+                             </div>
+                        <br></br>
+                     
+                    </div>
+
+            )}
+
+            <Modal show={showModalDeletar} onHide={()=> this.fechaModalCriar()}>
+                <Modal.Header closeButton>
+                    <Modal.Title>Deletar Dragão</Modal.Title>
+                </Modal.Header>
                 <Modal.Body>
-
-                    <form onSubmit={this.onCreate}>
-                        <Form.Group controlId="formBasicEmail">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control type="text" name="name"></Form.Control>
-                        </Form.Group>
-                          <Form.Group controlId="formType">
-                               <Form.Label>Type</Form.Label>
-                               <Form.Control type="text" name="type"></Form.Control>
-                         </Form.Group>
-                         <Button variant="primary" type="submit">
-                             Submit
-                         </Button>
-                    </form>     
+                    <p>Tem certeza que quer deletar o dragão?</p>
+                    <Button variant="danger" className="mr-4" onClick={()=> this.onDelete()}>
+                        Deletar
+                    </Button>
+                    <Button variant="secondary" onClick={()=> this.fechaModalCriar()}>
+                        Fechar
+                    </Button>
                 </Modal.Body>
-
-                <Modal.Footer>
-                    <Button variant='secondary' onClick={() => this.handleModalClose()}>close</Button>
-                </Modal.Footer>
             </Modal>
         </>;
     }

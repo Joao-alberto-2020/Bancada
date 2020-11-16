@@ -2,12 +2,29 @@
     background-color: transparent;
     backdrop-filter: blur(600px);
     border-radius: 80px;
-    color: black
+    color: white;
 }
+
+.colortext{
+    color: white;
+}
+
+.colortext2{
+    color: black;
+}
+
+.bordermobile{
+    border-radius: 20px!important;
+}
+
 .botao1{
 background-color: rgba(4, 0, 255, 0.472);
     backdrop-filter: blur(10px);
     border-radius: 130px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 1%;
+    padding-right: 1%;
 }
 .botao2{
     background-color: rgba(255, 0, 0, 0.479);
@@ -17,8 +34,8 @@ background-color: rgba(4, 0, 255, 0.472);
 .botao3{
     background-color: transparent;
     border-radius: 100px;
-    backdrop-filter: blur(20px);
-    
+    backdrop-filter: blur(200px); 
+    color: whitesmoke
 }
 
 .flutuar{
@@ -30,4 +47,19 @@ background-color: rgba(4, 0, 255, 0.472);
 
     animation-iteration-count: infinite;
     -webkit-animation-iteration-count: infinite;
+}
+
+.mobile1{
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .cards{
+        border-radius: 0px;
+    }
+    .none{display: none;}
+ }
+ 
+ @media only screen and (min-width: 600px){
+    .show{display:none;}
 }

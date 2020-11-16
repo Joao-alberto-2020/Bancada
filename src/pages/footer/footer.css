@@ -4,33 +4,54 @@ footer{
     backdrop-filter: blur(1000px);
     text-align: center;
     font-family: 'Grandstander', cursive;
+    width: 100%;
+    padding-right: 15px;
     
 }
 
 .img img{
-    height: 30px; 
-    width: 30px;
+    height: 50px; 
+    width: 50px;
     margin-right: 1rem;
-    /* botar em 30px como padrao */
+    
 } 
 .copyright {
     font-size: 11px;
     text-align: center;
 }
 
-.contato p a{
-color: rgb(13, 255, 195)
+.contato{
+    align-content: center;
+    font-size: x-large;
 }
-.contato p a:hover{
+.contato a{
+color: rgb(13, 255, 195);
+}
+.contato a:hover{
     color: rgba(42, 255, 141, 0.39)
- }
-
-.cor{
-color: royalblue
 }
 
 
+@media only screen and (max-width: 600px) {
+    footer{
+      font-size: small;
+      width: 100%;
+    }
+    .limit{
+        width: 100%!important;
+    }
+    .contato{
+        text-align: center;
+        font-size: small;
+    }
+    .img img{
+        height: 36px; 
+        width: 36px;
+        margin-right: 1rem;
+    } 
+    .none{display: none;}
+  }
 
-.endereço{
-text-align: 2rem;
-}
+  @media only screen and (min-width: 600px){
+      .show{display:none;}
+  }
