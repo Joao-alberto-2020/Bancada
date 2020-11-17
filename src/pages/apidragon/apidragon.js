@@ -13,7 +13,6 @@ class Apidragon extends Component {
             dragon: [], 
             id_dragon: 0
         };
-        
     }
 
     componentDidMount(){

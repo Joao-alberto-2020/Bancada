@@ -1,6 +1,6 @@
 .cards{
     background-color: transparent;
-    backdrop-filter: blur(600px);
+    backdrop-filter: blur(70px);
     border-radius: 80px;
     color: white;
 }
@@ -34,7 +34,7 @@ background-color: rgba(4, 0, 255, 0.472);
 .botao3{
     background-color: transparent;
     border-radius: 100px;
-    backdrop-filter: blur(200px); 
+    backdrop-filter: blur(50px); 
     color: whitesmoke
 }
 

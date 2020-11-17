@@ -27,7 +27,7 @@ class Footer extends Component {
                                          <a href="https://www.discord.com"> <img src={discord}></img></a>
                                          <a href="https://www.instagram.com"> <img src={insta}></img></a>
                                             </div>
-                                         </div>
+                                    </div>
                               </div>
                         </div>
                     
