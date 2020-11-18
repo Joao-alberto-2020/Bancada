@@ -11,9 +11,11 @@ class Header extends Component {
             <header>
                <div className="cont">
                <div className="row blur tamanho">
-                 <div></div>
+                 <div className="col">
                 GetRay
                 </div>
+                </div>
+                
                    <div className="row blur">
                    <Link className=" col-4 colortext" to="/apidragon">DRAGON</Link>
                    <Link className=" col-4 colortext" to="/">HOME</Link>

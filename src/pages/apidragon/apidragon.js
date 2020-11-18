@@ -127,7 +127,7 @@ class Apidragon extends Component {
 
             )}
 
-            <Modal show={showModalDeletar} onHide={()=> this.fechaModalCriar()}>
+            <Modal show={showModalDeletar} onHide={()=> this.fechaModalDeletar()}>
                 <Modal.Header closeButton>
                     <Modal.Title>Deletar Dragão</Modal.Title>
                 </Modal.Header>
@@ -136,7 +136,7 @@ class Apidragon extends Component {
                     <Button variant="danger" className="mr-4" onClick={()=> this.onDelete()}>
                         Deletar
                     </Button>
-                    <Button variant="secondary" onClick={()=> this.fechaModalCriar()}>
+                    <Button variant="secondary" onClick={()=> this.fechaModalDeletar()}>
                         Fechar
                     </Button>
                 </Modal.Body>
