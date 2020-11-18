@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import '../apidragon/apidragon.css'
+import routesConfig from '../../routesConfig';
 
 class ApiDragonForm extends Component {
     constructor() {
@@ -56,7 +57,7 @@ class ApiDragonForm extends Component {
 
             <input name="id" type="hidden" value={id}/>
 
-            <button className="botao3 mb-5" type="submit">editar</button>
+            <button className="botao3 mb-5" to="/apidragon" type="submit">editar</button>
       
         </div>
 
@@ -110,6 +111,7 @@ class ApiDragonForm extends Component {
         }
 
     }
+    
 
     changeInput(event) {
         let value = event.target.value;
@@ -119,41 +121,7 @@ class ApiDragonForm extends Component {
         });
     }
 
-//     onCreate(event) {
-//         event.preventDefault();
-//         let form = event.target;
-//         const { match } = this.props;
-//         const id = match.params.id;
 
-//         if(id)
-//          { const dragon = {
-//             name: form.elements.name.value,
-//             type: form.elements.type.value,
-//             id: form.elements.id.value,
-//         };
-//         const request = {
-//             method: 'PUT',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify(dragon)
-//         }
-//         fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/' + id)
-//             .then(response => response.json())
-//     }
-
-//         else {const dragon = {
-//             name: form.elements.name.value,
-//             type: form.elements.type.value,
-//         };
-//         const request = {
-//             method: 'POST',
-//             headers: { 'Content-Type': 'application/json' },
-//             body: JSON.stringify(dragon)
-//         }
-//         fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/', request)
-//             .then(response => response.json())
-//     }
-// }
- 
 onCreate(event) {
     event.preventDefault();
     let form = event.target;
@@ -185,12 +153,13 @@ onCreate(event) {
             id: form.elements.id.value,
         };
         const request = {
-            method: 'PUT',
+            method: "PUT",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(dragon)
         }
-        fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/' + id, dragon, request)
+        fetch('http://5c4b2a47aa8ee500142b4887.mockapi.io/api/v1/dragon/' +  dragon.id, request)
             .then(response => response.json())
+            .then( () => { window.history.back() } )
     }
 
 

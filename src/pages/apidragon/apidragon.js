@@ -46,40 +46,7 @@ class Apidragon extends Component {
     <div className="container botao3">
     <Link to="/apidragon/add" className="colortext2">Criar</Link>
         </div>
-            {/* <div className="container cards none">
-                <div className="row">
-                    <div className="col-12">
-
-                    <table className="table bg-card">
-                            <thead className="colortext">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nome</th>
-                                    <th>Tipo</th>
-                                    <th>Data</th>
-                                    <th>Ações</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {listDragons.map(
-                                    dragon =>
-                                    <tr className="colortext">
-                                        <td>{dragon.id}</td>
-                                        <td>{dragon.name}</td>
-                                        <td>{dragon.type}</td>
-                                        <td>{dragon.createdAt}</td>
-                                        <td>
-                                            <button className="botao1" onClick={() => this.onEdit(dragon.id)}>Editar</button>
-                                            <button className="botao2" onClick={() => this.onDelete(dragon.id)}>Deletar</button>
-                                        </td>
-                                    </tr>
-                                )}
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div> */}
+         
 
             {listDragons.map(
                     dragon =>       
