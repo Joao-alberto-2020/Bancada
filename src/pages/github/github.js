@@ -10,13 +10,13 @@ class Github extends Component{
   }
 
   componentDidMount(){
-      fetch("https://api.github.com/users/Joao-alberto-2020") //esse comando pega as infos do github.
-      .then ( response => response.json() ) // esse comando converte as infos para o formato json.
-      .then ( data => {this.setState({user: data}) } ); // comando coloca o valor 'data2' dentro de um atributo data.
+      fetch("https://api.github.com/users/Joao-alberto-2020") 
+      .then ( response => response.json() ) 
+      .then ( data => {this.setState({user: data}) } );
       
-      fetch("https://api.github.com/users/Joao-alberto-2020/repos") //esse comando pega as infos do github.
-      .then ( response => response.json() ) // esse comando converte as infos para o formato json.
-      .then ( data => {this.setState({repo: data}) } ); // comando coloca o valor 'data2' dentro de um atributo data.
+      fetch("https://api.github.com/users/Joao-alberto-2020/repos") 
+      .then ( response => response.json() ) 
+      .then ( data => {this.setState({repo: data}) } ); 
     }
 
 
@@ -40,7 +40,7 @@ render(){
                  </div>
 
                  <div className="col">     
-                    <img src={user. vatar_url}></img>
+                   
                      {repo.map(
                         repositorio => 
                          <div className="card container bg-card1">

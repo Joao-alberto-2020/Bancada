@@ -1,9 +1,10 @@
 .cards{
     background-color: transparent;
-    backdrop-filter: blur(70px);
+    backdrop-filter: blur(100px);
     border-radius: 80px;
     color: white;
 }
+
 
 .colortext{
     color: white;
@@ -12,6 +13,11 @@
 .colortext2{
     color: black;
 }
+
+.colortext3{
+    color: white;
+}
+
 
 .bordermobile{
     border-radius: 20px!important;
@@ -35,7 +41,7 @@ background-color: rgba(4, 0, 255, 0.472);
     background-color: transparent;
     border-radius: 100px;
     backdrop-filter: blur(50px); 
-    color: whitesmoke
+    color: white;
 }
 
 .flutuar{
@@ -63,3 +69,5 @@ background-color: rgba(4, 0, 255, 0.472);
  @media only screen and (min-width: 600px){
     .show{display:none;}
 }
+
+

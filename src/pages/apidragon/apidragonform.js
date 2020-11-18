@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import '../apidragon/apidragon.css'
-import routesConfig from '../../routesConfig';
+
 
 class ApiDragonForm extends Component {
     constructor() {
@@ -33,7 +33,7 @@ class ApiDragonForm extends Component {
 
             <div className="row">
                 <div className="col">
-                    <input className="botao3" type="text" name="name" value={this.state.textValue} onChange={() => this.changeInput} />
+                    <input className="botao3" type="text"  name="name" value={this.state.textValue} onChange={() => this.changeInput} />
                 </div>
             </div>
             <br></br>
@@ -57,7 +57,7 @@ class ApiDragonForm extends Component {
 
             <input name="id" type="hidden" value={id}/>
 
-            <button className="botao3 mb-5" to="/apidragon" type="submit">editar</button>
+            <button className="botao3 mb-5" type="submit">editar</button>
       
         </div>
 
@@ -146,7 +146,7 @@ onCreate(event) {
     onEdit(id) {
         id.preventDefault();
         let form = id.target;
-        console.log("hii")
+
 
         const dragon = {
             name: form.elements.name.value,
@@ -176,87 +176,14 @@ onCreate(event) {
        
         return <>
             <p className="botao3 mb-4" >{title}</p>
+            <div className="blur">
             {botao00} {botao11}
-            
-            {/* <form  onSubmit={this.onCreate}>  
-                     
-                    <div className="container cards">
-                    <div className="row">
-                        <div className="col mt-5">
-                            <label>Name:</label>
-                        </div>
-                    </div>
-
-
-                    <div className="row">
-                        <div className="col">
-                            <input className="botao3" type="text" name="name" value={this.state.textValue} onChange={() => this.changeInput} />
-                        </div>
-                    </div>
-                    <br></br>
-
-                    <div className="row">
-                        <div className="col">
-                            <label>Type:</label>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col">
-                            <input className="botao3" type="text" name="type" value={this.state.textValue} onChange={() => this.changeInput} />
-                        </div>
-                    </div>
-
-
-                    <input name="id" type="hidden" value={this.state.Id} />
-                    <br></br>
-                    <br></br>
-
-                    <button className="botao3 mb-5" type="submit">{action}</button>
-
-                </div>
-
-            </form>
-
-            <form onSubmit={this.onEdit}>  
-                     
-                     <div className="container cards">
-                     <div className="row">
-                         <div className="col mt-5">
-                             <label>Name:</label>
-                         </div>
-                     </div>
- 
- 
-                     <div className="row">
-                         <div className="col">
-                             <input className="botao3" type="text" name="name" value={this.state.textValue} onChange={() => this.changeInput} />
-                         </div>
-                     </div>
-                     <br></br>
- 
-                     <div className="row">
-                         <div className="col">
-                             <label>Type:</label>
-                         </div>
-                     </div>
- 
-                     <div className="row">
-                         <div className="col">
-                             <input className="botao3" type="text" name="type" value={this.state.textValue} onChange={() => this.changeInput} />
-                         </div>
-                     </div>
- 
- 
-                     <input name="id" type="hidden" value={this.state.Id} />
-                     <br></br>
-                     <br></br>
- 
-                     <button className="botao3 mb-5" type="submit">{action}</button>
- 
-                 </div>
- 
-             </form> */}
+            </div>
+            <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
+        
         </>;
     }
 }

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import "../header/header.css";
-import { Link, Route, withRouter } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import routesConfig from '../../routesConfig';
 
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Modal, Button } from 'react-bootstrap';
-import {Link, withRouter} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './apidragon.css';
 
 
@@ -44,7 +44,7 @@ class Apidragon extends Component {
         return <>
         
     <div className="container botao3">
-    <Link to="/apidragon/add" className="colortext2">Criar</Link>
+    <Link to="/apidragon/add" className="colortext3">Criar</Link>
         </div>
          
 
