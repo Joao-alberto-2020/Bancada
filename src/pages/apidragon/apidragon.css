@@ -5,6 +5,9 @@
     color: white;
 }
 
+.mobal{
+    backdrop-filter: blur(16px);
+}
 
 .colortext{
     color: white;

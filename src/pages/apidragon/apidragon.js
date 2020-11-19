@@ -10,7 +10,7 @@ class Apidragon extends Component {
         this.state = {
             listDragons: [],
             showModalDeletar: false,
-            dragon: [], 
+            dragon: [],
             id_dragon: 0
         };
     }
@@ -94,7 +94,7 @@ class Apidragon extends Component {
 
             )}
 
-            <Modal show={showModalDeletar} onHide={()=> this.fechaModalDeletar()}>
+            <Modal className="mobal" show={showModalDeletar} onHide={()=> this.fechaModalDeletar()}>
                 <Modal.Header closeButton>
                     <Modal.Title>Deletar Dragão</Modal.Title>
                 </Modal.Header>
